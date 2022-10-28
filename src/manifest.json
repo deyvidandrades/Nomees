@@ -1,0 +1,26 @@
+{
+    "short_name": "Nomees",
+    "name": "Nomees",
+    "icons": [
+        {
+            "src": "/imagem.png",
+            "type": "image/png",
+            "sizes": "700x546"
+        },
+        {
+            "src": "/imagem2.png",
+            "type": "image/png",
+            "sizes": "1400x805"
+        },
+        {
+            "src": "/favicon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "https://nomees.web.app/index.html",
+    "background_color": "#6E5773",
+    "display": "standalone",
+    "theme_color": "#6E5773",
+    "description": "Tente acertar o nome!"
+}

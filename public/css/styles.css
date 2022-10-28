@@ -1,0 +1,172 @@
+/* :pallet: https://colorhunt.co/palette/6e5773d45079ea9085e9e1cc */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6E5773;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    background-color: #6E5773 !important;
+}
+
+textarea {
+    background-color: #6E5773 !important;
+    color: #E9E1CC !important;
+    border-color: #EA9085 !important;
+    border-radius: 0 !important;
+}
+
+a, h3{
+    color: #EA9085 !important;
+}
+
+.color-accent {
+    color: #EA9085 !important;
+}
+.color-text{
+    color: #E9E1CC !important;
+}
+.btn-outline-secondary {
+    color: #E9E1CC !important;
+    border-color: #EA9085 !important;
+}
+.btn-outline-secondary:hover {
+    color: #E9E1CC !important;
+    border-color: #EA9085 !important;
+    background-color: #EA9085 !important;
+}
+.title {
+    color: #E9E1CC;
+    font-weight: bold;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+    border: 2px solid #EA9085;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-info {
+    color: #E9E1CC;
+    font-weight: bold;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fill {
+    background-color:  #EA9085;
+    color: #E9E1CC;
+}
+.board{
+    width: 350px !important;
+    height: 420px !important;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.tile {
+    width: 100%;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    vertical-align: middle;
+    box-sizing: border-box;
+    color: #E9E1CC;
+    text-transform: uppercase;
+    user-select: none;
+    border: 2px solid #EA9085;
+}
+
+.coluna {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 8px;
+}
+.modal-content{
+    background-color: #6E5773 !important;
+    color: #E9E1CC !important;
+}
+.square {
+    border: 2px solid #EA9085;
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #E9E1CC;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square-title {
+    background-color: #EA9085;
+    border: 2px solid #EA9085;
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #E9E1CC;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tecla{
+    font-family: inherit;
+    font-weight: bold;
+    border: 0;
+    padding: 0;
+    height: 58px;
+    cursor: pointer;
+    flex-grow: 1;
+    text-transform: uppercase;
+    border-radius: 4px;
+    user-select: none;
+}
+.tecla-clara{
+    background-color: #E9E1CC;
+    color: #6E5773;
+}
+.tecla-escura{
+    background-color: rgb(58, 58, 60);
+    color: #E9E1CC;
+}
+.tecla-verde{
+    background-color: rgb(83, 141, 78);
+    color: #E9E1CC;
+}
+.tecla-amarela{
+    background-color: rgb(181, 159, 59);
+    color: #E9E1CC;
+}

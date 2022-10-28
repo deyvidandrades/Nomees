@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta http-equiv="content-language" content="pt-BR"/>
+
+  <meta name="robots" content="NoFollow, noarchive"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+
+  <meta name="copyright" content="© 2022 Deyvid Andrade"/>
+  <meta name="author" content="Deyvid Andrade, Grupo DWS"/>
+
+  <meta name="description" content="Um jogo de palavras baseado no Wordle."/>
+  <meta name="keywords" content="wordle, nomes, termo, termooo"/>
+  <meta name="mobile-web-app-capable" content="no"/>
+  <meta name="theme-color" content="#6E5773"/>
+  <meta name="sourceApp" content="games-crosswords"/>
+
+  <link rel="canonical" href="https://nomees.web.app/index.html" />
+
+  <link rel="manifest" href="manifest.json" />
+
+  <link href="favicon.png" rel="icon shortcut" sizes="512512" />
+  <link href="favicon.png" rel="apple-touch-icon" />
+  <link rel="icon" type="image" href="favicon.png">
+
+  <meta property="og:title" content="Nomees">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nomees.web.app/">
+
+  <meta property="og:description" content="Um jogo de palavras baseado no Wordle. Tente acertar o nome!">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:site_name" content="Nomees">
+
+  <meta property="og:image" content="https://nomees.web.app/imagem.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="700">
+  <meta property="og:image:height" content="546">
+  <meta property="og:image:alt" content="Nomees, tente acertar o nome!">
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Nomees"/>
+  <meta name="twitter:description" content="Um jogo de palavras baseado no Wordle. Tente acertar o nome!"/>
+  <meta name="twitter:site" content="@deyvid_andrades"/>
+  <meta name="twitter:image" content="https://nomees.web.app/imagem2.png"/>
+  <meta name="twitter:image:alt" content="Imagem de uma partida de nomees."/>
+  <meta name="twitter:creator" content="@deyvid_andrades"/>
+
+  <title>Nomees</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="dist/animate/animate.min.css"/>
+  <link rel="stylesheet" href="dist/bootstrap-icons-1.8.1/bootstrap-icons.css">
+  <link href="dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="container">
+
+  <div class="row row-fluid d-flex justify-content-center h-100">
+    <div class="col col-12 col-lg-6 d-flex flex-column justify-content-center">
+      <!-- BARRA -->
+      <header class="row d-flex justify-content-center mt-3">
+        <div class="col col-12 col-lg-10 d-flex flex-wrap gap-2 fs-2 lh-base">
+          <div class="col title-info"><i class="bi bi-bar-chart-fill" data-bs-toggle="modal" data-bs-target="#statsModal"></i></div>
+          <div class="col title fill">N</div>
+          <div class="col title fill">O</div>
+          <div class="col title fill">M</div>
+          <div class="col title animate__animated" id="dle-1">E</div>
+          <div class="col title animate__animated" id="dle-2">E</div>
+          <div class="col title fill">S</div>
+          <!-- <div class="col title fill">S</div> -->
+          <div class="col title-info"><i class="bi bi-question-circle-fill" data-bs-toggle="modal" data-bs-target="#infoModal"></i></div>
+        </div>
+      </header>
+
+      <!-- BOARD -->
+      <div class="row d-flex justify-content-center align-items-center mt-4">
+
+        <div class="board">
+          <div class="coluna" length="5">
+            <div class="tile animate__animated" id="tile-1">‎</div>
+            <div class="tile animate__animated" id="tile-2"></div>
+            <div class="tile animate__animated" id="tile-3"></div>
+            <div class="tile animate__animated" id="tile-4"></div>
+            <div class="tile animate__animated" id="tile-5"></div>
+          </div>
+          <div class="coluna" length="5">
+            <div class="tile animate__animated" id="tile-6">‎</div>
+            <div class="tile animate__animated" id="tile-7"></div>
+            <div class="tile animate__animated" id="tile-8"></div>
+            <div class="tile animate__animated" id="tile-9"></div>
+            <div class="tile animate__animated" id="tile-10"></div>
+          </div>
+          <div class="coluna" length="5">
+            <div class="tile animate__animated" id="tile-11">‎</div>
+            <div class="tile animate__animated" id="tile-12"></div>
+            <div class="tile animate__animated" id="tile-13"></div>
+            <div class="tile animate__animated" id="tile-14"></div>
+            <div class="tile animate__animated" id="tile-15"></div>
+          </div>
+          <div class="coluna" length="5">
+            <div class="tile animate__animated" id="tile-16">‎</div>
+            <div class="tile animate__animated" id="tile-17"></div>
+            <div class="tile animate__animated" id="tile-18"></div>
+            <div class="tile animate__animated" id="tile-19"></div>
+            <div class="tile animate__animated" id="tile-20"></div>
+          </div>
+          <div class="coluna" length="5">
+            <div class="tile animate__animated" id="tile-21">‎</div>
+            <div class="tile animate__animated" id="tile-22"></div>
+            <div class="tile animate__animated" id="tile-23"></div>
+            <div class="tile animate__animated" id="tile-24"></div>
+            <div class="tile animate__animated" id="tile-25"></div>
+          </div>
+          <div class="coluna" length="5">
+            <div class="tile animate__animated" id="tile-26">‎</div>
+            <div class="tile animate__animated" id="tile-27"></div>
+            <div class="tile animate__animated" id="tile-28"></div>
+            <div class="tile animate__animated" id="tile-29"></div>
+            <div class="tile animate__animated" id="tile-30"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TECLADO -->
+      <div class="row d-flex justify-content-center my-3 ">
+        <div class="col col-12 col-lg-8 teclado m-1">
+          <div class="d-flex flex-nowrap gap-2 mb-2">
+            <button class="tecla tecla-clara" data-key="q">q</button>
+            <button class="tecla tecla-clara" data-key="w">w</button>
+            <button class="tecla tecla-clara" data-key="e">e</button>
+            <button class="tecla tecla-clara" data-key="r">r</button>
+            <button class="tecla tecla-clara" data-key="t">t</button>
+            <button class="tecla tecla-clara" data-key="y">y</button>
+            <button class="tecla tecla-clara" data-key="u">u</button>
+            <button class="tecla tecla-clara" data-key="i">i</button>
+            <button class="tecla tecla-clara" data-key="o">o</button>
+            <button class="tecla tecla-clara" data-key="p">p</button>
+          </div>
+
+          <div class="d-flex flex-nowrap gap-2 mb-2">
+            <div></div>
+            <button class="tecla tecla-clara" data-key="a">a</button>
+            <button class="tecla tecla-clara" data-key="s">s</button>
+            <button class="tecla tecla-clara" data-key="d">d</button>
+            <button class="tecla tecla-clara" data-key="f">f</button>
+            <button class="tecla tecla-clara" data-key="g">g</button>
+            <button class="tecla tecla-clara" data-key="h">h</button>
+            <button class="tecla tecla-clara" data-key="j">j</button>
+            <button class="tecla tecla-clara" data-key="k">k</button>
+            <button class="tecla tecla-clara" data-key="l">l</button>
+            <div></div>
+          </div>
+
+          <div class="d-flex flex-nowrap gap-2">
+            <button class="tecla tecla-clara" data-key="enter">Enter</button>
+            <button class="tecla tecla-clara" data-key="z">z</button>
+            <button class="tecla tecla-clara" data-key="x">x</button>
+            <button class="tecla tecla-clara" data-key="c">c</button>
+            <button class="tecla tecla-clara" data-key="v">v</button>
+            <button class="tecla tecla-clara" data-key="b">b</button>
+            <button class="tecla tecla-clara" data-key="n">n</button>
+            <button class="tecla tecla-clara" data-key="m">m</button>
+            <button class="tecla tecla-clara fw-bold" data-key="del"> <i class="bi bi-backspace"></i> </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="dialogoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content px-5">
+        <div class="modal-header border-0">
+          <h2 class="modal-title" id="ttl">Sobre</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-3 pb-5">
+          <h3 id="msg"></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content px-5">
+        <div class="modal-header border-0">
+          <h2 class="modal-title">Sobre</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body pb-5">
+          <p>Adivinhe o <b class="color-accent">nome</b> em seis palpites.</p>
+          <p>Cada palpite precisa ser um nome válido de cinco letras. Pressione <b class="color-accent">enter</b> no teclado para enviar o palpite.</p>
+          <p>Quando der um palpite válido, a cor dos blocos vai mudar indicando o quão perto você chegou de acertar o <b>nome</b>.</p>
+          <p><b class="color-accent">Nomees</b> é um jogo de palavras baseado no Wordle.</p>
+
+          <p>Desenvolvido por <a href="https://twitter.com/deyvid_andrades" class="fw-bold" target="_blank">@deyvid_andrades</a>.</p>
+
+          <p class="color-accent fw-bold m-0">Carregar/Salvar:</p>
+          <div class="input-group p-0">
+            <input id="carregar" type="file" accept=".save" class="form-control btn btn-outline-secondary mt-4">
+            <button id="salvar" type="button" class="btn btn-outline-secondary mt-4">Salvar <i class="bi bi-download"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="configModal" tabindex="-1" aria-labelledby="configModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content px-5">
+        <div class="modal-header border-0">
+          <h2 class="modal-title">Configuações</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3 pb-5">
+          <p>Nomees é um jogo de palavras baseado no Wordle.</p>
+          <p>Desenvolvido por <a href="https://twitter.com/deyvid_andrades" target="_blank">@deyvid_andrades</a>.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="statsModal" tabindex="-1" aria-labelledby="statsModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content px-5">
+        <div class="modal-header border-0 px-0">
+          <h2 class="modal-title">Resumo</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0 mb-5">
+          <p class="color-text fw-bold h4 mb-4"><label id="stats_parabens"></label> <label class="color-accent mt-2" id="stats_nome"></label></p>
+
+          <div class="row text-center">
+            <div class="col-6 col-md-3">
+              <p class="color-text fw-bold mb-1">PARTIDAS</p>
+              <p id="partidas" class="color-accent fw-bold fs-5 mb-0">0</p>
+            </div>
+            <div class="col-6 col-md-3">
+              <p class="color-text fw-bold mb-1">VITORIAS</p>
+              <p id="vitorias" class="color-accent fw-bold fs-5 mb-0">0</p>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <p class="color-text fw-bold mb-1">SEQUÊNCIA</p>
+              <p id="sequencia_vitorias_atual" class="color-accent fw-bold fs-5 mb-0">0.0</p>
+            </div>
+            <div class="col-6 col-md-3">
+              <p class="color-text fw-bold mb-1">RECORDE</p>
+              <p id="sequencia_vitorias" class="color-accent fw-bold fs-5 mb-0">0.0</p>
+            </div>
+            <button id="share" type="button" class="btn btn-outline-secondary mt-4">Compartilhar <i class="bi bi-share-fill"></i></button>
+
+            <p class="text-center mt-3 mb-0">©<script type="text/javascript">document.write(new Date().getFullYear());</script>
+              <label class="fw-bold fs-5">Nomees</label> v1.18.2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="dist/momentjs/moment.min.js"></script>
+  <script src="dist/jquery/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="dist/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="js/lista.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
