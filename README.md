@@ -2,6 +2,8 @@
 
 O **Nomees** é um jogo de palavras baseado no Wordle.
 
+![banner](https://nomees.web.app/imagem2.png)
+
 # Sobre
 Adivinhe o nome em seis palpites.
 
